@@ -1,3 +1,13 @@
+<?php
+    if(isset($_POST['submit'])){
+        $name_user = $_POST['name_user'];
+        $id_user = $_POST['id_user'];
+        $passwd_user = $_POST['passwd_user'];
+        $email = $_POST['email'];
+        $last_name = $_POST['last_user'];
+        $name = $_POST['name'];
+    }
+?>
 @extends('layouts.template')
 
 @section('title', 'Create User')
@@ -38,6 +48,9 @@
             <br>
             <button type="submit">Cancelar</button>
             <br>
+            <?php
+            include("validaciones.php")
+            ?>
 
         </form>
 @endsection
